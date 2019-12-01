@@ -1,2 +1,2 @@
 myDeliverypipeline(branch: 'master', scmUrl: 'ssh://git@myScmServer.com/repos/myRepo.git',
-                   email: 'somesh.sharma21@gmail.com', serverPort: '8080',
+                   email: 'somesh.sharma21@gmail.com', serverPort: '8080')

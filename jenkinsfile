@@ -1,4 +1,4 @@
 @Library('jenkinssharedlibrary')_
 
-myDeliverypipeline(branch: 'master', Url: 'https://github.com/khoubyari/spring-boot-rest-example.git',
+myDeliverypipeline(branch: 'master', Url: 'https://github.com/someshsharm21/spring-boot-rest-example.git',
                    email: 'somesh.sharma21@gmail.com', serverPort: '8080')

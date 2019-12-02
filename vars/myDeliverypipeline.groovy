@@ -27,6 +27,11 @@ def call(Map pipelineParams) {
                     )
                 }
             }
+             stage('email') {
+                steps {
+                    mail to: pipelineParams.email
+                }
+            }
 
         // post {
         //     failure {

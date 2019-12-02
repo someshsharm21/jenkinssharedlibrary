@@ -2,6 +2,10 @@ def call(Map pipelineParams) {
 
     pipeline {
         agent any
+           tools {
+      // Install the Maven version configured as "M3" and add it to the path.
+      maven "maven"
+        }
         stages {
             stage('checkout git') {
                 steps {
@@ -24,8 +28,10 @@ def call(Map pipelineParams) {
                 }
             }
 
-            stage('deploy developmentServer'){
-                steps {
-                    deploy(pipelineParams.developmentServer, pipelineParams.serverPort)
-                }
+        post {
+            failure {
+                mail to: pipelineParams.email, subject: 'Pipeline failed', body: "${env.BUILD_URL}"
             }
+        }
+    }
+}

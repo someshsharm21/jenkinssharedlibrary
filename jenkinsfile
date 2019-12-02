@@ -1,4 +1,4 @@
 @Library('jenkinssharedlibrary')_
 
-myDeliverypipeline(branch: 'master', scmUrl: 'ssh://git@myScmServer.com/repos/myRepo.git',
+myDeliverypipeline(branch: 'master', Url: 'https://github.com/someshsharm21/jenkinssharedlibrary.git',
                    email: 'somesh.sharma21@gmail.com', serverPort: '8080')
